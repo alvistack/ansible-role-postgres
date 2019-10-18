@@ -24,10 +24,13 @@ _repository:
 
 _package:
   "11":
+    - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql11-server" }
   "10":
+    - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql10-server" }
   "9.6":
+    - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql96-server" }
 
 _service:
