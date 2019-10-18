@@ -27,10 +27,13 @@ _repository:
 
 _package:
   "11":
+    - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-11" }
   "10":
+    - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-10" }
   "9.6":
+    - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-9.6" }
     - { state: "latest", name: "postgresql-contrib-9.6" }
 
