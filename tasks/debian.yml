@@ -38,6 +38,22 @@
   loop: "{{ postgres_repository }}"
   tags: postgres
 
+- name: apt-get install postgresql-common
+  apt:
+    name: "postgresql-common"
+    state: "present"
+  register: result
+  until: result is succeeded
+  tags: postgres
+
+- name: create_main_cluster = false
+  lineinfile:
+    path: "/etc/postgresql-common/createcluster.conf"
+    regexp: "^#*create_main_cluster = .*$"
+    line: "create_main_cluster = false"
+    state: "present"
+  tags: postgres
+
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
@@ -45,6 +61,4 @@
   loop: "{{ postgres_package }}"
   register: result
   until: result is succeeded
-  notify:
-    - postgres | systemctl restart
   tags: postgres

@@ -36,8 +36,3 @@ _package:
     - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-9.6" }
     - { state: "latest", name: "postgresql-contrib-9.6" }
-
-_service:
-  "11": "postgresql"
-  "10": "postgresql"
-  "9.6": "postgresql"

@@ -47,15 +47,3 @@
         - "."
   ignore_errors: true
   tags: postgres
-
-- name: enable service
-  service:
-    name: "{{ postgres_service }}"
-    enabled: true
-  changed_when: false
-  ignore_errors: true
-  tags: postgres
-
-- name: flush handlers
-  meta: flush_handlers
-  tags: postgres
