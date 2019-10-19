@@ -29,13 +29,6 @@
     - role: postgres
 
   post_tasks:
-    - name: start service
-      service:
-        name: "{{ postgres_service }}"
-        state: "started"
-      changed_when: false
-      ignore_errors: true
-
     - name: psql --version
       command: psql --version
       register: result

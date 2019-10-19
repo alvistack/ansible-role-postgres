@@ -38,15 +38,4 @@
   loop: "{{ postgres_package }}"
   register: result
   until: result is succeeded
-  notify:
-    - postgres | systemctl restart
   tags: postgres
-
-- name: initdb
-  shell: |
-    set -o pipefail
-    $(ls -1d /usr/pgsql-*/bin/postgresql-*-setup) initdb
-  args:
-    executable: "/bin/bash"
-  changed_when: false
-  ignore_errors: true

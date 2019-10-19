@@ -32,8 +32,3 @@ _package:
   "9.6":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql96-server" }
-
-_service:
-  "11": "postgresql-11"
-  "10": "postgresql-10"
-  "9.6": "postgresql-96"
