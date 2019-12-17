@@ -18,21 +18,20 @@ _apt_key:
   - { state: "present", url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc" }
 
 _repository:
+  "12":
+    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" }
   "11":
     - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" }
   "10":
     - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" }
-  "9.6":
-    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" }
 
 _package:
+  "12":
+    - { state: "latest", name: "libnss-wrapper" }
+    - { state: "latest", name: "postgresql-12" }
   "11":
     - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-11" }
   "10":
     - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-10" }
-  "9.6":
-    - { state: "latest", name: "libnss-wrapper" }
-    - { state: "latest", name: "postgresql-9.6" }
-    - { state: "latest", name: "postgresql-contrib-9.6" }

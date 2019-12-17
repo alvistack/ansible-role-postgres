@@ -15,20 +15,20 @@
 # limitations under the License.
 
 _repository:
+  "12":
+    - { state: "latest", name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm" }
   "11":
     - { state: "latest", name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm" }
   "10":
     - { state: "latest", name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm" }
-  "9.6":
-    - { state: "latest", name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm" }
 
 _package:
+  "12":
+    - { state: "latest", name: "nss_wrapper" }
+    - { state: "latest", name: "postgresql12-server" }
   "11":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql11-server" }
   "10":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql10-server" }
-  "9.6":
-    - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql96-server" }

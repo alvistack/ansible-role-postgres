@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # PostgreSQL release.
-postgres_release: "11"
+postgres_release: "12"
 
 # Specify PostgreSQL repository.
 postgres_repository: "{{ _repository[postgres_release] }}"
