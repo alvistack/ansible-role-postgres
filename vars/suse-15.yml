@@ -16,11 +16,17 @@
 
 _repository:
   "12":
-    - { state: "present", name: "server:database:postgresql", repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1" }
+    - name: "server:database:postgresql"
+      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
+      state: "present"
   "11":
-    - { state: "present", name: "server:database:postgresql", repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1" }
+    - name: "server:database:postgresql"
+      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
+      state: "present"
   "10":
-    - { state: "present", name: "server:database:postgresql", repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1" }
+    - name: "server:database:postgresql"
+      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
+      state: "present"
 
 _package:
   "12":
@@ -32,3 +38,8 @@ _package:
   "10":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql10-server" }
+
+_service:
+  "12": "postgresql"
+  "11": "postgresql"
+  "10": "postgresql"

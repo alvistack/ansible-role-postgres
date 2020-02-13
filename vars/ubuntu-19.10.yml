@@ -19,11 +19,11 @@ _apt_key:
 
 _repository:
   "12":
-    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" }
+    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg main" }
   "11":
-    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" }
+    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg main" }
   "10":
-    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" }
+    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg main" }
 
 _package:
   "12":

@@ -22,3 +22,6 @@ postgres_repository: "{{ _repository[postgres_release] }}"
 
 # Specify PostgreSQL packages.
 postgres_package: "{{ _package[postgres_release] }}"
+
+# Service name for PostgreSQL.
+postgres_service: "{{ _service[postgres_release] }}"

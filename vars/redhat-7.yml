@@ -32,3 +32,5 @@ _package:
   "10":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql10-server" }
+
+_postgres_service: "postgresql"
