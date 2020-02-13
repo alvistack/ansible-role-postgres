@@ -13,3 +13,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+- name: postgres | systemctl restart
+  service:
+    name: "{{ postgres_service }}"
+    state: "restarted"
+  loop: "{{ ansible_play_hosts }}"
+  delegate_to: "{{ item }}"
+  run_once: true
+  changed_when: false
+  ignore_errors: true

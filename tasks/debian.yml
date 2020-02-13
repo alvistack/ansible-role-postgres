@@ -61,4 +61,6 @@
   loop: "{{ postgres_package }}"
   register: result
   until: result is succeeded
+  notify:
+    - postgres | systemctl restart
   tags: postgres

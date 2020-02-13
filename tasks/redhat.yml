@@ -38,4 +38,19 @@
   loop: "{{ postgres_package }}"
   register: result
   until: result is succeeded
+  notify:
+    - postgres | systemctl restart
+  tags: postgres
+
+- name: initdb
+  shell: |
+    set -o pipefail
+    /usr/pgsql-{{ postgres_release }}/bin/postgresql-{{ postgres_release }}-setup initdb
+  args:
+    executable: "/bin/bash"
+    creates: "/var/lib/pgsql/{{ postgres_release }}/data/postgresql.conf"
+  register: result
+  changed_when: result is not succeeded
+  notify:
+    - postgres | systemctl restart
   tags: postgres
