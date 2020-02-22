@@ -14,6 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_service:
+  "12": "postgresql"
+  "11": "postgresql"
+  "10": "postgresql"
+
 _apt_key:
   - url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
     id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
@@ -40,8 +45,3 @@ _package:
   "10":
     - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-10" }
-
-_service:
-  "12": "postgresql"
-  "11": "postgresql"
-  "10": "postgresql"
