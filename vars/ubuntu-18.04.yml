@@ -15,15 +15,20 @@
 # limitations under the License.
 
 _apt_key:
-  - { state: "present", url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc" }
+  - url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+    id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
+    state: "present"
 
 _repository:
   "12":
-    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" }
+    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
+      state: "present"
   "11":
-    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" }
+    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
+      state: "present"
   "10":
-    - { state: "present", repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" }
+    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
+      state: "present"
 
 _package:
   "12":
