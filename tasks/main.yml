@@ -52,7 +52,7 @@
   meta: flush_handlers
   tags: postgres
 
-- name: enable service
+- name: start service
   service:
     name: "{{ postgres_service }}"
     state: "started"

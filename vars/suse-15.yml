@@ -14,6 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_service:
+  "12": "postgresql"
+  "11": "postgresql"
+  "10": "postgresql"
+
 _repository:
   "12":
     - name: "server:database:postgresql"
@@ -38,8 +43,3 @@ _package:
   "10":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql10-server" }
-
-_service:
-  "12": "postgresql"
-  "11": "postgresql"
-  "10": "postgresql"

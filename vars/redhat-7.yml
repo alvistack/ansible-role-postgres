@@ -14,13 +14,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_service:
+  "12": "postgresql-12"
+  "11": "postgresql-11"
+  "10": "postgresql-10"
+
 _repository:
   "12":
-    - { state: "latest", name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm" }
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      state: "latest"
   "11":
-    - { state: "latest", name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm" }
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      state: "latest"
   "10":
-    - { state: "latest", name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm" }
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      state: "latest"
 
 _package:
   "12":
@@ -32,5 +40,3 @@ _package:
   "10":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql10-server" }
-
-_postgres_service: "postgresql"
