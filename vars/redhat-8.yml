@@ -21,22 +21,22 @@ _service:
 
 _yum_repository:
   "12":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       state: "latest"
   "11":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       state: "latest"
   "10":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       state: "latest"
 
 _yum:
   "12":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql12-server" }
+    - { state: "latest", name: "postgresql12-server", disablerepo: "rhel-8-for-x86_64-appstream-rpms" }
   "11":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql11-server" }
+    - { state: "latest", name: "postgresql11-server", disablerepo: "rhel-8-for-x86_64-appstream-rpms" }
   "10":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql10-server" }
+    - { state: "latest", name: "postgresql10-server", disablerepo: "rhel-8-for-x86_64-appstream-rpms" }

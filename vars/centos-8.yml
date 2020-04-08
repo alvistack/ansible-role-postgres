@@ -15,31 +15,28 @@
 # limitations under the License.
 
 _service:
-  "12": "postgresql"
-  "11": "postgresql"
-  "10": "postgresql"
+  "12": "postgresql-12"
+  "11": "postgresql-11"
+  "10": "postgresql-10"
 
-_zypper_repository:
+_yum_repository:
   "12":
-    - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
-      state: "present"
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      state: "latest"
   "11":
-    - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
-      state: "present"
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      state: "latest"
   "10":
-    - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
-      state: "present"
+    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      state: "latest"
 
-_zypper:
+_yum:
   "12":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql12-server" }
+    - { state: "latest", name: "postgresql12-server", disablerepo: "AppStream" }
   "11":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql11-server" }
+    - { state: "latest", name: "postgresql11-server", disablerepo: "AppStream" }
   "10":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql10-server" }
+    - { state: "latest", name: "postgresql10-server", disablerepo: "AppStream" }

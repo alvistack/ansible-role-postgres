@@ -26,7 +26,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ postgres_repository }}"
+  loop: "{{ _yum_repository[postgres_release] }}"
   register: result
   until: result is succeeded
   tags: postgres
@@ -34,8 +34,9 @@
 - name: yum install
   yum:
     name: "{{ item.name }}"
-    state: "{{ item.state }}"
-  loop: "{{ postgres_package }}"
+    disablerepo: "{{ item.disablerepo | default(None) or omit }}"
+    state: "{{ item.state | default(None) or omit }}"
+  loop: "{{ _yum[postgres_release] }}"
   register: result
   until: result is succeeded
   notify:
