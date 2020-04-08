@@ -35,7 +35,7 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  loop: "{{ postgres_repository }}"
+  loop: "{{ _apt_repository[postgres_release] }}"
   register: result
   until: result is succeeded
   tags: postgres
@@ -60,7 +60,7 @@
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ postgres_package }}"
+  loop: "{{ _apt[postgres_release] }}"
   register: result
   until: result is succeeded
   notify:

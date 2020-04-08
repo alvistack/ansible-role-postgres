@@ -34,7 +34,7 @@
     disable_gpg_check: true
     auto_import_keys: true
     autorefresh: true
-  loop: "{{ postgres_repository }}"
+  loop: "{{ _zypper_repository[postgres_release] }}"
   tags: postgres
 
 - name: zypper install
@@ -44,7 +44,7 @@
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     extra_args: "--allow-vendor-change"
-  loop: "{{ postgres_package }}"
+  loop: "{{ _zypper[postgres_release] }}"
   register: result
   until: result is succeeded
   notify:

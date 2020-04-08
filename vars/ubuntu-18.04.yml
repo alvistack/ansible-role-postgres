@@ -24,7 +24,7 @@ _apt_key:
     id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
     state: "present"
 
-_repository:
+_apt_repository:
   "12":
     - repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
       state: "present"
@@ -35,7 +35,7 @@ _repository:
     - repo: "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
       state: "present"
 
-_package:
+_apt:
   "12":
     - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-12" }

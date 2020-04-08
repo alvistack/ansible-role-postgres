@@ -19,7 +19,7 @@ _service:
   "11": "postgresql"
   "10": "postgresql"
 
-_repository:
+_zypper_repository:
   "12":
     - name: "server:database:postgresql"
       repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
@@ -33,7 +33,7 @@ _repository:
       repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
       state: "present"
 
-_package:
+_zypper:
   "12":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql12-server" }
