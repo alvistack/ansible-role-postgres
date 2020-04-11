@@ -19,7 +19,7 @@ _service:
   "11": "postgresql-11"
   "10": "postgresql-10"
 
-_yum_repository:
+_rpm_repository:
   "12":
     - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       state: "latest"
