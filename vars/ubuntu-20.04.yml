@@ -20,19 +20,28 @@ _service:
   "10": "postgresql"
 
 _apt_key:
-  - url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
-    id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
-    state: "present"
+  "12":
+    - url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
+      state: "present"
+  "11":
+    - url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
+      state: "present"
+  "10":
+    - url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
+      state: "present"
 
 _apt_repository:
   "12":
-    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
+    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
       state: "present"
   "11":
-    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
+    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
       state: "present"
   "10":
-    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
+    - repo: "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
       state: "present"
 
 _apt:

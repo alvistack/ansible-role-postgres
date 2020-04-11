@@ -26,7 +26,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ _yum_repository[postgres_release] }}"
+  loop: "{{ _rpm_repository[postgres_release] }}"
   register: result
   until: result is succeeded
   tags: postgres
