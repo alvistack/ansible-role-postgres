@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: postgres | systemctl restart
+- name: postgres | systemctl restart postgresql
   service:
     name: "{{ postgres_service }}"
     state: "restarted"
