@@ -34,13 +34,13 @@
 - name: yum install
   yum:
     name: "{{ item.name }}"
+    state: "{{ item.state }}"
     disablerepo: "{{ item.disablerepo | default(None) or omit }}"
-    state: "{{ item.state | default(None) or omit }}"
   loop: "{{ _yum[postgres_release] }}"
   register: result
   until: result is succeeded
   notify:
-    - postgres | systemctl restart
+    - postgres | systemctl restart postgresql
   tags: postgres
 
 - name: initdb
@@ -53,5 +53,5 @@
   register: result
   changed_when: result is not succeeded
   notify:
-    - postgres | systemctl restart
+    - postgres | systemctl restart postgresql
   tags: postgres
