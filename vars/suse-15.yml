@@ -22,15 +22,15 @@ _service:
 _zypper_repository:
   "12":
     - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
+      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
       state: "present"
   "11":
     - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
+      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
       state: "present"
   "10":
     - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.1"
+      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
       state: "present"
 
 _zypper:
