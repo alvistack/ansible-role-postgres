@@ -35,6 +35,7 @@
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
+    mode: "{{ item.mode | default('0644') }}"
   loop: "{{ _apt_repository[postgres_release] }}"
   register: result
   until: result is succeeded
@@ -49,10 +50,12 @@
   tags: postgres
 
 - name: create_main_cluster = false
-  lineinfile:
+  ini_file:
     path: "/etc/postgresql-common/createcluster.conf"
-    regexp: "^#*create_main_cluster = .*$"
-    line: "create_main_cluster = false"
+    section: ""
+    option: "create_main_cluster"
+    value: "false"
+    mode: "0644"
     state: "present"
   tags: postgres
 
