@@ -40,7 +40,7 @@
   register: result
   until: result is succeeded
   notify:
-    - postgres | systemctl restart postgresql
+    - postgres | systemctl restart postgresql.service
   tags: postgres
 
 - name: initdb

@@ -15,9 +15,9 @@
 # limitations under the License.
 
 _service:
-  "12": "postgresql"
-  "11": "postgresql"
-  "10": "postgresql"
+  "12": "postgresql.service"
+  "11": "postgresql.service"
+  "10": "postgresql.service"
 
 _zypper_repository:
   "12":

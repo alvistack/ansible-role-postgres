@@ -48,7 +48,7 @@
   ignore_errors: true
   tags: postgres
 
-- name: systemctl start postgresql
+- name: systemctl start postgresql.service
   service:
     name: "{{ postgres_service }}"
     state: "started"
