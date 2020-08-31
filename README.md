@@ -1,7 +1,7 @@
 # Ansible Role for PostgreSQL
 
 [![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-postgres.svg)](https://travis-ci.com/alvistack/ansible-role-postgres)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-postgres.svg)](https://github.com/alvistack/ansible-role-postgres)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-postgres.svg)](https://github.com/alvistack/ansible-role-postgres/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-postgres.svg)](https://github.com/alvistack/ansible-role-postgres/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.postgres-blue.svg)](https://galaxy.ansible.com/alvistack/postgres)
 
