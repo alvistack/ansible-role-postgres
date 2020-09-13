@@ -19,6 +19,20 @@ _service:
   "11": "postgresql-11.service"
   "10": "postgresql-10.service"
 
+_rpm_key:
+  "12":
+    - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-12"
+      fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
+      state: "present"
+  "11":
+    - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-11"
+      fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
+      state: "present"
+  "10":
+    - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-10"
+      fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
+      state: "present"
+
 _rpm_repository:
   "12":
     - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"

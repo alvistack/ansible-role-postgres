@@ -50,7 +50,7 @@
 
 - name: systemctl start postgresql.service
   service:
-    name: "{{ postgres_service }}"
+    name: "{{ _service[postgres_release] }}"
     state: "started"
     enabled: true
   changed_when: false
