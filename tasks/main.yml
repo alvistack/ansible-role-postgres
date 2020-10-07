@@ -45,6 +45,9 @@
         - "."
   ignore_errors: true
 
+- name: flush handlers
+  meta: flush_handlers
+
 - name: systemctl start postgresql.service
   service:
     name: "{{ _service[postgres_release] }}"
@@ -52,6 +55,3 @@
     enabled: true
   changed_when: false
   ignore_errors: true
-
-- name: flush handlers
-  meta: flush_handlers
