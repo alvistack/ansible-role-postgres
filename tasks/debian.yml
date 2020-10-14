@@ -20,7 +20,6 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: postgres
 
 - name: apt-key add
   apt_key:
@@ -29,7 +28,6 @@
   loop: "{{ _apt_key[postgres_release] }}"
   register: result
   until: result is succeeded
-  tags: postgres
 
 - name: apt-add-repository
   apt_repository:
@@ -39,7 +37,6 @@
   loop: "{{ _apt_repository[postgres_release] }}"
   register: result
   until: result is succeeded
-  tags: postgres
 
 - name: apt-get install postgresql-common
   apt:
@@ -47,7 +44,6 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: postgres
 
 - name: create_main_cluster = false
   ini_file:
@@ -57,7 +53,6 @@
     value: "false"
     mode: "0644"
     state: "present"
-  tags: postgres
 
 - name: apt-get install
   apt:
@@ -68,4 +63,3 @@
   until: result is succeeded
   notify:
     - postgres | systemctl restart postgresql.service
-  tags: postgres
