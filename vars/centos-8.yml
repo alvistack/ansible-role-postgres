@@ -47,10 +47,10 @@ _rpm_repository:
 _yum:
   "12":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql12-server", disablerepo: "AppStream" }
+    - { state: "latest", name: "postgresql12-server", disablerepo: "appstream" }
   "11":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql11-server", disablerepo: "AppStream" }
+    - { state: "latest", name: "postgresql11-server", disablerepo: "appstream" }
   "10":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql10-server", disablerepo: "AppStream" }
+    - { state: "latest", name: "postgresql10-server", disablerepo: "appstream" }
