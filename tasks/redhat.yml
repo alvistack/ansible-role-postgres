@@ -51,7 +51,7 @@
 
 - name: initdb
   shell: |
-    set -o pipefail
+    set -euo pipefail
     /usr/pgsql-{{ postgres_release }}/bin/postgresql-{{ postgres_release }}-setup initdb
   args:
     executable: "/bin/bash"
