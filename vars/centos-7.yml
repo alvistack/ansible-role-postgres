@@ -21,28 +21,49 @@ _service:
 
 _rpm_key:
   "12":
+    - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+      fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
+      state: "present"
     - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-12"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
   "11":
+    - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+      fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
+      state: "present"
     - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-11"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
   "10":
+    - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+      fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
+      state: "present"
     - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-10"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
 
-_rpm_repository:
+_rpm_download:
   "12":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      state: "latest"
+    - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+      dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
+      checksum: "sha256:46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
+    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/dae20f1c628091d1527e41ba0345a9533813f16ca022010700a76d9b00320971/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "sha256:dae20f1c628091d1527e41ba0345a9533813f16ca022010700a76d9b00320971"
   "11":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      state: "latest"
+    - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+      dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
+      checksum: "sha256:46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
+    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/dae20f1c628091d1527e41ba0345a9533813f16ca022010700a76d9b00320971/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "sha256:dae20f1c628091d1527e41ba0345a9533813f16ca022010700a76d9b00320971"
   "10":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      state: "latest"
+    - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+      dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
+      checksum: "sha256:46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
+    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/dae20f1c628091d1527e41ba0345a9533813f16ca022010700a76d9b00320971/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "sha256:dae20f1c628091d1527e41ba0345a9533813f16ca022010700a76d9b00320971"
 
 _yum:
   "12":

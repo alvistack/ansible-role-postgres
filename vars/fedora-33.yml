@@ -33,16 +33,19 @@ _rpm_key:
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
 
-_rpm_repository:
+_rpm_download:
   "12":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      state: "latest"
+    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "sha256:6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1"
   "11":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      state: "latest"
+    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "sha256:6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1"
   "10":
-    - name: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      state: "latest"
+    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "sha256:6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1"
 
 _yum:
   "12":
