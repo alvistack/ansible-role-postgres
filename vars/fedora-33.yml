@@ -21,29 +21,29 @@ _service:
 
 _rpm_key:
   "12":
-    - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-12"
+    - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-12"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
   "11":
-    - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-11"
+    - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-11"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
   "10":
-    - key: "https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-10"
+    - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-10"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
 
 _rpm_download:
   "12":
-    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
+    - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1/pgdg-fedora-repo-latest.noarch.rpm"
       checksum: "sha256:6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1"
   "11":
-    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
+    - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1/pgdg-fedora-repo-latest.noarch.rpm"
       checksum: "sha256:6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1"
   "10":
-    - url: "https://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
+    - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-33-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1/pgdg-fedora-repo-latest.noarch.rpm"
       checksum: "sha256:6f871f455f327f4ef061244f59096932f7edb6e387e60abe31e4867df276baf1"
 
