@@ -48,22 +48,22 @@ _rpm_download:
       dest: "/var/cache/ansible/74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8/epel-release-latest-8.noarch.rpm"
       checksum: "sha256:74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/10503307ca59f99b6c8464197348a7c676a864815fa26408f17a45c4e9d07ae6/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "sha256:10503307ca59f99b6c8464197348a7c676a864815fa26408f17a45c4e9d07ae6"
+      dest: "/var/cache/ansible/3f1dbb8d4cfbb779cd3c23b9d7c6130d3820fa2542bedbac48189e41a7d7ab47/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "sha256:3f1dbb8d4cfbb779cd3c23b9d7c6130d3820fa2542bedbac48189e41a7d7ab47"
   "11":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
       dest: "/var/cache/ansible/74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8/epel-release-latest-8.noarch.rpm"
       checksum: "sha256:74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/10503307ca59f99b6c8464197348a7c676a864815fa26408f17a45c4e9d07ae6/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "sha256:10503307ca59f99b6c8464197348a7c676a864815fa26408f17a45c4e9d07ae6"
+      dest: "/var/cache/ansible/3f1dbb8d4cfbb779cd3c23b9d7c6130d3820fa2542bedbac48189e41a7d7ab47/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "sha256:3f1dbb8d4cfbb779cd3c23b9d7c6130d3820fa2542bedbac48189e41a7d7ab47"
   "10":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
       dest: "/var/cache/ansible/74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8/epel-release-latest-8.noarch.rpm"
       checksum: "sha256:74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/10503307ca59f99b6c8464197348a7c676a864815fa26408f17a45c4e9d07ae6/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "sha256:10503307ca59f99b6c8464197348a7c676a864815fa26408f17a45c4e9d07ae6"
+      dest: "/var/cache/ansible/3f1dbb8d4cfbb779cd3c23b9d7c6130d3820fa2542bedbac48189e41a7d7ab47/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "sha256:3f1dbb8d4cfbb779cd3c23b9d7c6130d3820fa2542bedbac48189e41a7d7ab47"
 
 _yum:
   "12":
