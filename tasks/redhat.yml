@@ -51,7 +51,7 @@
     creates: "{{ item.dest }}.log"
   loop: "{{ _rpm_download[postgres_release] }}"
   changed_when: false
-  ignore_errors: true
+  failed_when: false
 
 - name: yum install
   yum:
@@ -72,4 +72,4 @@
     executable: "/bin/bash"
     creates: "/var/lib/pgsql/{{ postgres_release }}/data/postgresql.conf"
   changed_when: false
-  ignore_errors: true
+  failed_when: false
