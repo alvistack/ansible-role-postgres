@@ -15,42 +15,42 @@
 # limitations under the License.
 
 _service:
+  "13": "postgresql.service"
   "12": "postgresql.service"
   "11": "postgresql.service"
-  "10": "postgresql.service"
 
 _apt_key:
+  "13":
+    - url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
+      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
+      state: "present"
   "12":
     - url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
   "11":
-    - url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
-      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
-      state: "present"
-  "10":
     - url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
 
 _apt_repository:
+  "13":
+    - repo: "deb http://apt.postgresql.org/pub/repos/apt bullseye-pgdg main"
+      state: "present"
   "12":
     - repo: "deb http://apt.postgresql.org/pub/repos/apt bullseye-pgdg main"
       state: "present"
   "11":
     - repo: "deb http://apt.postgresql.org/pub/repos/apt bullseye-pgdg main"
       state: "present"
-  "10":
-    - repo: "deb http://apt.postgresql.org/pub/repos/apt bullseye-pgdg main"
-      state: "present"
 
 _apt:
+  "13":
+    - { state: "latest", name: "libnss-wrapper" }
+    - { state: "latest", name: "postgresql-13" }
   "12":
     - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-12" }
   "11":
     - { state: "latest", name: "libnss-wrapper" }
     - { state: "latest", name: "postgresql-11" }
-  "10":
-    - { state: "latest", name: "libnss-wrapper" }
-    - { state: "latest", name: "postgresql-10" }

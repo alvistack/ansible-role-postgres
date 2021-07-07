@@ -15,11 +15,15 @@
 # limitations under the License.
 
 _service:
+  "13": "postgresql-13.service"
   "12": "postgresql-12.service"
   "11": "postgresql-11.service"
-  "10": "postgresql-10.service"
 
 _rpm_key:
+  "13":
+    - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-13"
+      fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
+      state: "present"
   "12":
     - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-12"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
@@ -28,32 +32,28 @@ _rpm_key:
     - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-11"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
-  "10":
-    - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-10"
-      fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
-      state: "present"
 
 _rpm_download:
+  "13":
+    - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-34-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/3ad91a275390a3f7d133a84e320ef2967926f4227e2e12c22c62bda426e1e480/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "3ad91a275390a3f7d133a84e320ef2967926f4227e2e12c22c62bda426e1e480"
   "12":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-34-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/c65963524a1efeffc24723b062008a1eca611bab6067b3570034692e1de77e2b/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "c65963524a1efeffc24723b062008a1eca611bab6067b3570034692e1de77e2b"
+      dest: "/var/cache/ansible/3ad91a275390a3f7d133a84e320ef2967926f4227e2e12c22c62bda426e1e480/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "3ad91a275390a3f7d133a84e320ef2967926f4227e2e12c22c62bda426e1e480"
   "11":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-34-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/c65963524a1efeffc24723b062008a1eca611bab6067b3570034692e1de77e2b/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "c65963524a1efeffc24723b062008a1eca611bab6067b3570034692e1de77e2b"
-  "10":
-    - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-34-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/c65963524a1efeffc24723b062008a1eca611bab6067b3570034692e1de77e2b/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "c65963524a1efeffc24723b062008a1eca611bab6067b3570034692e1de77e2b"
+      dest: "/var/cache/ansible/3ad91a275390a3f7d133a84e320ef2967926f4227e2e12c22c62bda426e1e480/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "3ad91a275390a3f7d133a84e320ef2967926f4227e2e12c22c62bda426e1e480"
 
 _yum:
+  "13":
+    - { state: "latest", name: "nss_wrapper" }
+    - { state: "latest", name: "postgresql13-server" }
   "12":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql12-server" }
   "11":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql11-server" }
-  "10":
-    - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql10-server" }

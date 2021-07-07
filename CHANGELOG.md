@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Add PostgreSQL 13 support
+  - Remove PostgreSQL 10 support
   - Upgrade minimal Ansible community package support to 4.1.0
   - Support Debian 11
   - Support openSUSE Leap 15.3

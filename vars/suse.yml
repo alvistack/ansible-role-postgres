@@ -15,11 +15,15 @@
 # limitations under the License.
 
 _service:
+  "13": "postgresql.service"
   "12": "postgresql.service"
   "11": "postgresql.service"
-  "10": "postgresql.service"
 
 _zypper_repository:
+  "13":
+    - name: "server:database:postgresql"
+      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
+      state: "present"
   "12":
     - name: "server:database:postgresql"
       repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
@@ -28,18 +32,14 @@ _zypper_repository:
     - name: "server:database:postgresql"
       repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
       state: "present"
-  "10":
-    - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
-      state: "present"
 
 _zypper:
+  "13":
+    - { state: "latest", name: "nss_wrapper" }
+    - { state: "latest", name: "postgresql13-server" }
   "12":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql12-server" }
   "11":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql11-server" }
-  "10":
-    - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql10-server" }
