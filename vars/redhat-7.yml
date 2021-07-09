@@ -15,11 +15,18 @@
 # limitations under the License.
 
 _service:
+  "13": "postgresql-13.service"
   "12": "postgresql-12.service"
   "11": "postgresql-11.service"
-  "10": "postgresql-10.service"
 
 _rpm_key:
+  "13":
+    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+      fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
+      state: "present"
+    - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-13"
+      fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
+      state: "present"
   "12":
     - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
       fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
@@ -34,44 +41,37 @@ _rpm_key:
     - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-11"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
-  "10":
-    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
-      fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
-      state: "present"
-    - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-10"
-      fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
-      state: "present"
 
 _rpm_download:
+  "13":
+    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+      dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
+      checksum: "46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
+    - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
+      dest: "/var/cache/ansible/bfa8ec67adda260b6423cfc939b0ec7c0efa6f0ee01dc11dfde3a30210ee3108/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "bfa8ec67adda260b6423cfc939b0ec7c0efa6f0ee01dc11dfde3a30210ee3108"
   "12":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
       dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
       checksum: "46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/9b13569d811898c1432657c25dfe94c5b33e4a7b9963add0bc5add6c046fb2dc/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "9b13569d811898c1432657c25dfe94c5b33e4a7b9963add0bc5add6c046fb2dc"
+      dest: "/var/cache/ansible/bfa8ec67adda260b6423cfc939b0ec7c0efa6f0ee01dc11dfde3a30210ee3108/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "bfa8ec67adda260b6423cfc939b0ec7c0efa6f0ee01dc11dfde3a30210ee3108"
   "11":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
       dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
       checksum: "46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/9b13569d811898c1432657c25dfe94c5b33e4a7b9963add0bc5add6c046fb2dc/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "9b13569d811898c1432657c25dfe94c5b33e4a7b9963add0bc5add6c046fb2dc"
-  "10":
-    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
-      dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
-      checksum: "46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
-    - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/9b13569d811898c1432657c25dfe94c5b33e4a7b9963add0bc5add6c046fb2dc/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "9b13569d811898c1432657c25dfe94c5b33e4a7b9963add0bc5add6c046fb2dc"
+      dest: "/var/cache/ansible/bfa8ec67adda260b6423cfc939b0ec7c0efa6f0ee01dc11dfde3a30210ee3108/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "bfa8ec67adda260b6423cfc939b0ec7c0efa6f0ee01dc11dfde3a30210ee3108"
 
 _yum:
+  "13":
+    - { state: "latest", name: "nss_wrapper" }
+    - { state: "latest", name: "postgresql13-server" }
   "12":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql12-server" }
   "11":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql11-server" }
-  "10":
-    - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql10-server" }
