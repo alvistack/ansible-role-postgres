@@ -21,17 +21,17 @@ _service:
 
 _apt_key:
   "13":
-    - keyring: "/etc/apt/trusted.gpg.d/postgresql.asc"
+    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
       url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
   "12":
-    - keyring: "/etc/apt/trusted.gpg.d/postgresql.asc"
+    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
       url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
   "11":
-    - keyring: "/etc/apt/trusted.gpg.d/postgresql.asc"
+    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
       url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
