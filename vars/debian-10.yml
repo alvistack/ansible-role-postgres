@@ -21,27 +21,33 @@ _service:
 
 _apt_key:
   "13":
-    - url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
+    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
+      url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
   "12":
-    - url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
+    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
+      url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
   "11":
-    - url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
+    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
+      url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
       id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
       state: "present"
 
 _apt_repository:
   "13":
-    - repo: "deb http://apt.postgresql.org/pub/repos/apt buster-pgdg main"
+    - filename: "postgresql"
+      repo: "deb http://apt.postgresql.org/pub/repos/apt buster-pgdg main"
       state: "present"
   "12":
-    - repo: "deb http://apt.postgresql.org/pub/repos/apt buster-pgdg main"
+    - filename: "postgresql"
+      repo: "deb http://apt.postgresql.org/pub/repos/apt buster-pgdg main"
       state: "present"
   "11":
-    - repo: "deb http://apt.postgresql.org/pub/repos/apt buster-pgdg main"
+    - filename: "postgresql"
+      repo: "deb http://apt.postgresql.org/pub/repos/apt buster-pgdg main"
       state: "present"
 
 _apt:

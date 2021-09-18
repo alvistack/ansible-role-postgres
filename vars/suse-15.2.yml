@@ -19,18 +19,53 @@ _service:
   "12": "postgresql.service"
   "11": "postgresql.service"
 
-_zypper_repository:
+_rpm_key:
   "13":
-    - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
+    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
       state: "present"
   "12":
-    - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
+    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
       state: "present"
   "11":
-    - name: "server:database:postgresql"
-      repo: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
+    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
+      state: "present"
+
+_yum_repository:
+  "13":
+    - file: "server_database_postgresql"
+      name: "server_database_postgresql"
+      description: "PostgreSQL and related packages (openSUSE_Leap_15.2)"
+      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2/repodata/repomd.xml.key"
+      state: "present"
+  "12":
+    - file: "server_database_postgresql"
+      name: "server_database_postgresql"
+      description: "PostgreSQL and related packages (openSUSE_Leap_15.2)"
+      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2/repodata/repomd.xml.key"
+      state: "present"
+  "11":
+    - file: "server_database_postgresql"
+      name: "server_database_postgresql"
+      description: "PostgreSQL and related packages (openSUSE_Leap_15.2)"
+      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.2/repodata/repomd.xml.key"
       state: "present"
 
 _zypper:
