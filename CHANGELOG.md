@@ -4,6 +4,9 @@
 
 ### Major Changes
 
+  - Skip package upgrade before running molecule
+  - Support PostgreSQL 14
+  - Remove PostgreSQL 11 support
   - Support Fedora Rawhide
   - Support Debian Testing
 
