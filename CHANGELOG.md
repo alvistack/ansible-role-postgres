@@ -1,9 +1,14 @@
 # Ansible Role for PostgreSQL
 
-## 5.5.0 - TBC
+## 5.6.0 - TBC
 
 ### Major Changes
 
+## 5.5.0 - 2022-02-11
+
+### Major Changes
+
+  - Remove Ubuntu 21.04 support
   - Skip package upgrade before running molecule
   - Support PostgreSQL 14
   - Remove PostgreSQL 11 support
