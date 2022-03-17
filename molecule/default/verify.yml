@@ -19,6 +19,6 @@
   become: true
   tasks:
     - name: psql --version
-      command: psql --version
+      ansible.builtin.command: psql --version
       register: result
       changed_when: result is not succeeded
