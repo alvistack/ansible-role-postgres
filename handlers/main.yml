@@ -15,7 +15,7 @@
 # limitations under the License.
 
 - name: postgres | systemctl restart postgresql.service
-  service:
+  ansible.builtin.service:
     name: "{{ _service[postgres_release] }}"
     state: "restarted"
     enabled: true
