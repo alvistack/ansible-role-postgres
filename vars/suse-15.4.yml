@@ -21,51 +21,51 @@ _service:
 
 _rpm_key:
   "14":
-    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4/repodata/repomd.xml.key"
-      fingerprint: "116EB863315.4E47E63CDF4D562111AC05905EA8"
+    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
       state: "present"
   "13":
-    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4/repodata/repomd.xml.key"
-      fingerprint: "116EB863315.4E47E63CDF4D562111AC05905EA8"
+    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
       state: "present"
   "12":
-    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4/repodata/repomd.xml.key"
-      fingerprint: "116EB863315.4E47E63CDF4D562111AC05905EA8"
+    - key: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
       state: "present"
 
 _yum_repository:
   "14":
     - file: "server_database_postgresql"
       name: "server_database_postgresql"
-      description: "PostgreSQL and related packages (openSUSE_Leap_15.4)"
-      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4"
+      description: "PostgreSQL and related packages (openSUSE_Leap_15.3)"
+      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4/repodata/repomd.xml.key"
+      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       state: "present"
   "13":
     - file: "server_database_postgresql"
       name: "server_database_postgresql"
-      description: "PostgreSQL and related packages (openSUSE_Leap_15.4)"
-      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4"
+      description: "PostgreSQL and related packages (openSUSE_Leap_15.3)"
+      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4/repodata/repomd.xml.key"
+      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       state: "present"
   "12":
     - file: "server_database_postgresql"
       name: "server_database_postgresql"
-      description: "PostgreSQL and related packages (openSUSE_Leap_15.4)"
-      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4"
+      description: "PostgreSQL and related packages (openSUSE_Leap_15.3)"
+      baseurl: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.4/repodata/repomd.xml.key"
+      gpgkey: "http://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Leap_15.3/repodata/repomd.xml.key"
       state: "present"
 
 _zypper:
