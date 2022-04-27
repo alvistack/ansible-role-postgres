@@ -20,5 +20,5 @@
   tasks:
     - name: include role
       ansible.builtin.include_role:
-        name: postgres
-      tags: postgres
+        name: alvistack.postgres
+      tags: alvistack.postgres
