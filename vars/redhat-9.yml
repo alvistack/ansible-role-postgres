@@ -68,10 +68,10 @@ _rpm_download:
 _yum:
   "14":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql14-server", disablerepo: "rhel-9-for-x86_64-appstream-beta-rpms" }
+    - { state: "latest", name: "postgresql14-server", disablerepo: "rhel-9-for-x86_64-appstream-rpms" }
   "13":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql13-server", disablerepo: "rhel-9-for-x86_64-appstream-beta-rpms" }
+    - { state: "latest", name: "postgresql13-server", disablerepo: "rhel-9-for-x86_64-appstream-rpms" }
   "12":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql12-server", disablerepo: "rhel-9-for-x86_64-appstream-beta-rpms" }
+    - { state: "latest", name: "postgresql12-server", disablerepo: "rhel-9-for-x86_64-appstream-rpms" }
