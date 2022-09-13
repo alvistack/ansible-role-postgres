@@ -36,16 +36,16 @@ _rpm_key:
 _rpm_download:
   "14":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-36-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/7f600df5ccc0fff4a933c3c99d89fe47e895097f47d1ec1b9f6e8853f8eea7b0/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "7f600df5ccc0fff4a933c3c99d89fe47e895097f47d1ec1b9f6e8853f8eea7b0"
+      dest: "/var/cache/ansible/d095aa4821da7a99db453d9ddadf68cc270ddeee736993ac24c4c3ad71260f5b/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "d095aa4821da7a99db453d9ddadf68cc270ddeee736993ac24c4c3ad71260f5b"
   "13":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-36-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/7f600df5ccc0fff4a933c3c99d89fe47e895097f47d1ec1b9f6e8853f8eea7b0/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "7f600df5ccc0fff4a933c3c99d89fe47e895097f47d1ec1b9f6e8853f8eea7b0"
+      dest: "/var/cache/ansible/d095aa4821da7a99db453d9ddadf68cc270ddeee736993ac24c4c3ad71260f5b/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "d095aa4821da7a99db453d9ddadf68cc270ddeee736993ac24c4c3ad71260f5b"
   "12":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-36-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/7f600df5ccc0fff4a933c3c99d89fe47e895097f47d1ec1b9f6e8853f8eea7b0/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "7f600df5ccc0fff4a933c3c99d89fe47e895097f47d1ec1b9f6e8853f8eea7b0"
+      dest: "/var/cache/ansible/d095aa4821da7a99db453d9ddadf68cc270ddeee736993ac24c4c3ad71260f5b/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "d095aa4821da7a99db453d9ddadf68cc270ddeee736993ac24c4c3ad71260f5b"
 
 _yum:
   "14":
