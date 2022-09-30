@@ -42,7 +42,7 @@
   until: result is succeeded
 
 - name: create_main_cluster = false
-  ini_file:
+  community.general.ini_file:
     path: "/etc/postgresql-common/createcluster.conf"
     section: ""
     option: "create_main_cluster"
