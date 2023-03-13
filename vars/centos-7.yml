@@ -48,22 +48,22 @@ _rpm_download:
       dest: "/var/cache/ansible/e2d5ffdd4cfe09dde17018a31d100db611abe88cc6761d9bdc0c1f41efaa5aa0/epel-release-latest-7.noarch.rpm"
       checksum: "e2d5ffdd4cfe09dde17018a31d100db611abe88cc6761d9bdc0c1f41efaa5aa0"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/2769ccad805263f20bc6e2bb722288d8dcd74fd68c59cce37f17953388a22ac3/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "2769ccad805263f20bc6e2bb722288d8dcd74fd68c59cce37f17953388a22ac3"
+      dest: "/var/cache/ansible/10a68a78c5093a5f396c7c2aeffc6682a6636e5e07c4d1660fdc67edb56076f1/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "10a68a78c5093a5f396c7c2aeffc6682a6636e5e07c4d1660fdc67edb56076f1"
   "13":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
       dest: "/var/cache/ansible/e2d5ffdd4cfe09dde17018a31d100db611abe88cc6761d9bdc0c1f41efaa5aa0/epel-release-latest-7.noarch.rpm"
       checksum: "e2d5ffdd4cfe09dde17018a31d100db611abe88cc6761d9bdc0c1f41efaa5aa0"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/2769ccad805263f20bc6e2bb722288d8dcd74fd68c59cce37f17953388a22ac3/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "2769ccad805263f20bc6e2bb722288d8dcd74fd68c59cce37f17953388a22ac3"
+      dest: "/var/cache/ansible/10a68a78c5093a5f396c7c2aeffc6682a6636e5e07c4d1660fdc67edb56076f1/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "10a68a78c5093a5f396c7c2aeffc6682a6636e5e07c4d1660fdc67edb56076f1"
   "12":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
       dest: "/var/cache/ansible/e2d5ffdd4cfe09dde17018a31d100db611abe88cc6761d9bdc0c1f41efaa5aa0/epel-release-latest-7.noarch.rpm"
       checksum: "e2d5ffdd4cfe09dde17018a31d100db611abe88cc6761d9bdc0c1f41efaa5aa0"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/2769ccad805263f20bc6e2bb722288d8dcd74fd68c59cce37f17953388a22ac3/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "2769ccad805263f20bc6e2bb722288d8dcd74fd68c59cce37f17953388a22ac3"
+      dest: "/var/cache/ansible/10a68a78c5093a5f396c7c2aeffc6682a6636e5e07c4d1660fdc67edb56076f1/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "10a68a78c5093a5f396c7c2aeffc6682a6636e5e07c4d1660fdc67edb56076f1"
 
 _yum:
   "14":
