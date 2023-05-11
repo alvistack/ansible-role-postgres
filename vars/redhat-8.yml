@@ -45,22 +45,22 @@ _rpm_key:
 _rpm_download:
   "14":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
-      dest: "/var/cache/ansible/d6f1e7ca1db1f27f80d34599cb5544f277c186728ec670284fdf389d896ed194/epel-release-latest-8.noarch.rpm"
-      checksum: "d6f1e7ca1db1f27f80d34599cb5544f277c186728ec670284fdf389d896ed194"
+      dest: "/var/cache/ansible/864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a/epel-release-latest-8.noarch.rpm"
+      checksum: "864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df/pgdg-redhat-repo-latest.noarch.rpm"
       checksum: "9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df"
   "13":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
-      dest: "/var/cache/ansible/d6f1e7ca1db1f27f80d34599cb5544f277c186728ec670284fdf389d896ed194/epel-release-latest-8.noarch.rpm"
-      checksum: "d6f1e7ca1db1f27f80d34599cb5544f277c186728ec670284fdf389d896ed194"
+      dest: "/var/cache/ansible/864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a/epel-release-latest-8.noarch.rpm"
+      checksum: "864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df/pgdg-redhat-repo-latest.noarch.rpm"
       checksum: "9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df"
   "12":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
-      dest: "/var/cache/ansible/d6f1e7ca1db1f27f80d34599cb5544f277c186728ec670284fdf389d896ed194/epel-release-latest-8.noarch.rpm"
-      checksum: "d6f1e7ca1db1f27f80d34599cb5544f277c186728ec670284fdf389d896ed194"
+      dest: "/var/cache/ansible/864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a/epel-release-latest-8.noarch.rpm"
+      checksum: "864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df/pgdg-redhat-repo-latest.noarch.rpm"
       checksum: "9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df"
