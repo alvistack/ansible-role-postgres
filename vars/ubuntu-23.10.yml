@@ -39,15 +39,15 @@ _apt_key:
 _apt_repository:
   "14":
     - filename: "postgresql"
-      repo: "deb http://apt.postgresql.org/pub/repos/apt lunar-pgdg main"
+      repo: "deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main"
       state: "present"
   "13":
     - filename: "postgresql"
-      repo: "deb http://apt.postgresql.org/pub/repos/apt lunar-pgdg main"
+      repo: "deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main"
       state: "present"
   "12":
     - filename: "postgresql"
-      repo: "deb http://apt.postgresql.org/pub/repos/apt lunar-pgdg main"
+      repo: "deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main"
       state: "present"
 
 _apt:
