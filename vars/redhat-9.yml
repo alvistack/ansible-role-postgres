@@ -21,21 +21,21 @@ _service:
 
 _rpm_key:
   "14":
-    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
+    - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
       fingerprint: "FF8AD1344597106ECE813B918A3872BF3228467C"
       state: "present"
     - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-14"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
   "13":
-    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
+    - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
       fingerprint: "FF8AD1344597106ECE813B918A3872BF3228467C"
       state: "present"
     - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-13"
       fingerprint: "68C9E2B91A37D136FE74D1761F16D2E1442DF0F8"
       state: "present"
   "12":
-    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
+    - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
       fingerprint: "FF8AD1344597106ECE813B918A3872BF3228467C"
       state: "present"
     - key: "http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-12"
@@ -44,21 +44,21 @@ _rpm_key:
 
 _rpm_download:
   "14":
-    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+    - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
       dest: "/var/cache/ansible/a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a/epel-release-latest-9.noarch.rpm"
       checksum: "a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/8bfaf23d0c790b6890dd8fb37ba547da82632d13f215eb579195830c73a48975/pgdg-redhat-repo-latest.noarch.rpm"
       checksum: "8bfaf23d0c790b6890dd8fb37ba547da82632d13f215eb579195830c73a48975"
   "13":
-    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+    - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
       dest: "/var/cache/ansible/a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a/epel-release-latest-9.noarch.rpm"
       checksum: "a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
       dest: "/var/cache/ansible/8bfaf23d0c790b6890dd8fb37ba547da82632d13f215eb579195830c73a48975/pgdg-redhat-repo-latest.noarch.rpm"
       checksum: "8bfaf23d0c790b6890dd8fb37ba547da82632d13f215eb579195830c73a48975"
   "12":
-    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+    - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
       dest: "/var/cache/ansible/a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a/epel-release-latest-9.noarch.rpm"
       checksum: "a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
