@@ -15,48 +15,48 @@
 # limitations under the License.
 
 _service:
+  "16": "postgresql.service"
+  "15": "postgresql.service"
   "14": "postgresql.service"
-  "13": "postgresql.service"
-  "12": "postgresql.service"
 
 _rpm_key:
+  "16":
+    - key: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
+      state: "present"
+  "15":
+    - key: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
+      state: "present"
   "14":
-    - key: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
-      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
-      state: "present"
-  "13":
-    - key: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
-      fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
-      state: "present"
-  "12":
     - key: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
       fingerprint: "116EB86331583E47E63CDF4D562111AC05905EA8"
       state: "present"
 
 _yum_repository:
+  "16":
+    - file: "server_database_postgresql"
+      name: "server_database_postgresql"
+      description: "PostgreSQL and related packages (openSUSE_Tumbleweed)"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+      state: "present"
+  "15":
+    - file: "server_database_postgresql"
+      name: "server_database_postgresql"
+      description: "PostgreSQL and related packages (openSUSE_Tumbleweed)"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+      state: "present"
   "14":
-    - file: "server_database_postgresql"
-      name: "server_database_postgresql"
-      description: "PostgreSQL and related packages (openSUSE_Tumbleweed)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
-      state: "present"
-  "13":
-    - file: "server_database_postgresql"
-      name: "server_database_postgresql"
-      description: "PostgreSQL and related packages (openSUSE_Tumbleweed)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed"
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key"
-      state: "present"
-  "12":
     - file: "server_database_postgresql"
       name: "server_database_postgresql"
       description: "PostgreSQL and related packages (openSUSE_Tumbleweed)"
@@ -69,12 +69,12 @@ _yum_repository:
       state: "present"
 
 _zypper:
+  "16":
+    - { state: "latest", name: "nss_wrapper" }
+    - { state: "latest", name: "postgresql16-server" }
+  "15":
+    - { state: "latest", name: "nss_wrapper" }
+    - { state: "latest", name: "postgresql15-server" }
   "14":
     - { state: "latest", name: "nss_wrapper" }
     - { state: "latest", name: "postgresql14-server" }
-  "13":
-    - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql13-server" }
-  "12":
-    - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql12-server" }

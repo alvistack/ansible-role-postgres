@@ -15,4 +15,4 @@
 # limitations under the License.
 
 # PostgreSQL release.
-postgres_release: "14"
+postgres_release: "16"
