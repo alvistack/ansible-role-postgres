@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_postgres_release: "16"
+
 _service:
   "16": "postgresql-16.service"
   "15": "postgresql-15.service"
@@ -36,24 +38,24 @@ _rpm_key:
 _rpm_download:
   "16":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-37-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/552d3818fb8fd4bef17c583becea82c043bc42abccec28f4979f50ead655d149/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "552d3818fb8fd4bef17c583becea82c043bc42abccec28f4979f50ead655d149"
+      dest: "/var/cache/ansible/7661c771e5ab64bdec21b992fe1367dcecd96e6b6118c9c6a125dc6f152e0226/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "7661c771e5ab64bdec21b992fe1367dcecd96e6b6118c9c6a125dc6f152e0226"
   "15":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-37-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/552d3818fb8fd4bef17c583becea82c043bc42abccec28f4979f50ead655d149/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "552d3818fb8fd4bef17c583becea82c043bc42abccec28f4979f50ead655d149"
+      dest: "/var/cache/ansible/7661c771e5ab64bdec21b992fe1367dcecd96e6b6118c9c6a125dc6f152e0226/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "7661c771e5ab64bdec21b992fe1367dcecd96e6b6118c9c6a125dc6f152e0226"
   "14":
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/F-37-x86_64/pgdg-fedora-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/552d3818fb8fd4bef17c583becea82c043bc42abccec28f4979f50ead655d149/pgdg-fedora-repo-latest.noarch.rpm"
-      checksum: "552d3818fb8fd4bef17c583becea82c043bc42abccec28f4979f50ead655d149"
+      dest: "/var/cache/ansible/7661c771e5ab64bdec21b992fe1367dcecd96e6b6118c9c6a125dc6f152e0226/pgdg-fedora-repo-latest.noarch.rpm"
+      checksum: "7661c771e5ab64bdec21b992fe1367dcecd96e6b6118c9c6a125dc6f152e0226"
 
 _yum:
   "16":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql16-server" }
+    - { state: "present", name: "postgresql16-server-{{ postgres_version }}*" }
   "15":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql15-server" }
+    - { state: "present", name: "postgresql15-server-{{ postgres_version }}*" }
   "14":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql14-server" }
+    - { state: "present", name: "postgresql14-server-{{ postgres_version }}*" }

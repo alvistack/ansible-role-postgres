@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_postgres_release: "16"
+
 _service:
   "16": "postgresql-16.service"
   "15": "postgresql-15.service"
@@ -48,30 +50,30 @@ _rpm_download:
       dest: "/var/cache/ansible/864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a/epel-release-latest-8.noarch.rpm"
       checksum: "864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df"
+      dest: "/var/cache/ansible/3cde93179094494137bf4031e1d30777bde28ab46ffa9925a2dc113e1600f7ee/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "3cde93179094494137bf4031e1d30777bde28ab46ffa9925a2dc113e1600f7ee"
   "15":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
       dest: "/var/cache/ansible/864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a/epel-release-latest-8.noarch.rpm"
       checksum: "864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df"
+      dest: "/var/cache/ansible/3cde93179094494137bf4031e1d30777bde28ab46ffa9925a2dc113e1600f7ee/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "3cde93179094494137bf4031e1d30777bde28ab46ffa9925a2dc113e1600f7ee"
   "14":
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
       dest: "/var/cache/ansible/864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a/epel-release-latest-8.noarch.rpm"
       checksum: "864e52669121da85a4893de799de275e37feff97b4930d7867bd5c93263ee79a"
     - url: "http://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm"
-      dest: "/var/cache/ansible/9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df/pgdg-redhat-repo-latest.noarch.rpm"
-      checksum: "9e90c37c892201058440c1f4b8e86d8a02e16679e21cc5aa5c1e752632d0b6df"
+      dest: "/var/cache/ansible/3cde93179094494137bf4031e1d30777bde28ab46ffa9925a2dc113e1600f7ee/pgdg-redhat-repo-latest.noarch.rpm"
+      checksum: "3cde93179094494137bf4031e1d30777bde28ab46ffa9925a2dc113e1600f7ee"
 
 _yum:
   "16":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql16-server", disablerepo: "rhel-8-for-x86_64-appstream-rpms" }
+    - { state: "present", name: "postgresql16-server-{{ postgres_version }}*" }
   "15":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql15-server", disablerepo: "rhel-8-for-x86_64-appstream-rpms" }
+    - { state: "present", name: "postgresql15-server-{{ postgres_version }}*" }
   "14":
     - { state: "latest", name: "nss_wrapper" }
-    - { state: "latest", name: "postgresql14-server", disablerepo: "rhel-8-for-x86_64-appstream-rpms" }
+    - { state: "present", name: "postgresql14-server-{{ postgres_version }}*" }
