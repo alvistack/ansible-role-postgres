@@ -2,6 +2,11 @@
 
 ## 9.1.0 - TBC
 
+-   Support PostgreSQL 16
+-   Support PostgreSQL 15
+-   Remove PostgreSQL 13 support
+-   Remove PostgreSQL 12 support
+
 ## 9.0.0 - 2023-11-08
 
 -   Support Ansible community package 9.0.0
