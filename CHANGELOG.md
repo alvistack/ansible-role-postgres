@@ -2,6 +2,7 @@
 
 ## 9.1.0 - TBC
 
+-   Remove openSUSE Leap 15.4 support
 -   Support PostgreSQL 16
 -   Support PostgreSQL 15
 -   Remove PostgreSQL 13 support
