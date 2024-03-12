@@ -1,5 +1,4 @@
 ---
-
 # Copyright 2024 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,7 +36,7 @@
 - name: apt-mark unhold
   ansible.builtin.dpkg_selections:
     name: "{{ item.name | regex_replace('^(.*)=[0-9]*:*[0-9]+\\..*$', '\\1') }}"
-    selection: "install"
+    selection: install
   loop: "{{ _apt[postgres_release] }}"
   when: item.state == "present"
   changed_when: false
@@ -45,19 +44,19 @@
 
 - name: apt-get install postgresql-common
   ansible.builtin.apt:
-    name: "postgresql-common"
-    state: "present"
+    name: postgresql-common
+    state: present
   register: result
   until: result is succeeded
 
 - name: create_main_cluster = false
   community.general.ini_file:
-    path: "/etc/postgresql-common/createcluster.conf"
+    path: /etc/postgresql-common/createcluster.conf
     section: ""
-    option: "create_main_cluster"
+    option: create_main_cluster
     value: "false"
     mode: "0644"
-    state: "present"
+    state: present
 
 - name: apt-get install
   ansible.builtin.apt:
@@ -72,7 +71,7 @@
 - name: apt-mark hold
   ansible.builtin.dpkg_selections:
     name: "{{ item.name | regex_replace('^(.*)=[0-9]*:*[0-9]+\\..*$', '\\1') }}"
-    selection: "hold"
+    selection: hold
   loop: "{{ _apt[postgres_release] }}"
   when: item.state == "present"
   changed_when: false

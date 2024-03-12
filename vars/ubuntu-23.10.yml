@@ -17,48 +17,48 @@
 _postgres_release: "16"
 
 _service:
-  "16": "postgresql.service"
-  "15": "postgresql.service"
-  "14": "postgresql.service"
+  "16": postgresql.service
+  "15": postgresql.service
+  "14": postgresql.service
 
 _apt_key:
   "16":
-    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
-      url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
-      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
-      state: "present"
+    - keyring: /etc/apt/trusted.gpg.d/postgresql.gpg
+      url: http://www.postgresql.org/media/keys/ACCC4CF8.asc
+      id: B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+      state: present
   "15":
-    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
-      url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
-      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
-      state: "present"
+    - keyring: /etc/apt/trusted.gpg.d/postgresql.gpg
+      url: http://www.postgresql.org/media/keys/ACCC4CF8.asc
+      id: B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+      state: present
   "14":
-    - keyring: "/etc/apt/trusted.gpg.d/postgresql.gpg"
-      url: "http://www.postgresql.org/media/keys/ACCC4CF8.asc"
-      id: "B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8"
-      state: "present"
+    - keyring: /etc/apt/trusted.gpg.d/postgresql.gpg
+      url: http://www.postgresql.org/media/keys/ACCC4CF8.asc
+      id: B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+      state: present
 
 _apt_repository:
   "16":
-    - filename: "postgresql"
-      repo: "deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main"
-      state: "present"
+    - filename: postgresql
+      repo: deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main
+      state: present
   "15":
-    - filename: "postgresql"
-      repo: "deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main"
-      state: "present"
+    - filename: postgresql
+      repo: deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main
+      state: present
   "14":
-    - filename: "postgresql"
-      repo: "deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main"
-      state: "present"
+    - filename: postgresql
+      repo: deb http://apt.postgresql.org/pub/repos/apt mantic-pgdg main
+      state: present
 
 _apt:
   "16":
-    - { state: "latest", name: "libnss-wrapper" }
-    - { state: "present", name: "postgresql-16={{ postgres_version }}*" }
+    - { state: latest, name: libnss-wrapper }
+    - { state: present, name: "postgresql-16={{ postgres_version }}*" }
   "15":
-    - { state: "latest", name: "libnss-wrapper" }
-    - { state: "present", name: "postgresql-15={{ postgres_version }}*" }
+    - { state: latest, name: libnss-wrapper }
+    - { state: present, name: "postgresql-15={{ postgres_version }}*" }
   "14":
-    - { state: "latest", name: "libnss-wrapper" }
-    - { state: "present", name: "postgresql-14={{ postgres_version }}*" }
+    - { state: latest, name: libnss-wrapper }
+    - { state: present, name: "postgresql-14={{ postgres_version }}*" }
