@@ -41,15 +41,15 @@ _apt_key:
 _apt_repository:
   "16":
     - filename: postgresql
-      repo: deb http://apt.postgresql.org/pub/repos/apt sid-pgdg main
+      repo: deb http://apt.postgresql.org/pub/repos/apt noble-pgdg main
       state: present
   "15":
     - filename: postgresql
-      repo: deb http://apt.postgresql.org/pub/repos/apt sid-pgdg main
+      repo: deb http://apt.postgresql.org/pub/repos/apt noble-pgdg main
       state: present
   "14":
     - filename: postgresql
-      repo: deb http://apt.postgresql.org/pub/repos/apt sid-pgdg main
+      repo: deb http://apt.postgresql.org/pub/repos/apt noble-pgdg main
       state: present
 
 _apt:
