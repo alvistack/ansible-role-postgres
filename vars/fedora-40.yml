@@ -1,0 +1,61 @@
+---
+
+# Copyright 2024 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_postgres_release: "16"
+
+_service:
+  "16": postgresql-16.service
+  "15": postgresql-15.service
+  "14": postgresql-14.service
+
+_rpm_key:
+  "16":
+    - key: http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-16
+      fingerprint: 68C9E2B91A37D136FE74D1761F16D2E1442DF0F8
+      state: present
+  "15":
+    - key: http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-15
+      fingerprint: 68C9E2B91A37D136FE74D1761F16D2E1442DF0F8
+      state: present
+  "14":
+    - key: http://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-14
+      fingerprint: 68C9E2B91A37D136FE74D1761F16D2E1442DF0F8
+      state: present
+
+_rpm_download:
+  "16":
+    - url: http://download.postgresql.org/pub/repos/yum/reporpms/F-39-x86_64/pgdg-fedora-repo-latest.noarch.rpm
+      dest: /var/cache/ansible/4d9df751e032bb897a1569c630e9cea6d95fc99bce37f54915daeadf7af764f0/pgdg-fedora-repo-latest.noarch.rpm
+      checksum: 4d9df751e032bb897a1569c630e9cea6d95fc99bce37f54915daeadf7af764f0
+  "15":
+    - url: http://download.postgresql.org/pub/repos/yum/reporpms/F-39-x86_64/pgdg-fedora-repo-latest.noarch.rpm
+      dest: /var/cache/ansible/4d9df751e032bb897a1569c630e9cea6d95fc99bce37f54915daeadf7af764f0/pgdg-fedora-repo-latest.noarch.rpm
+      checksum: 4d9df751e032bb897a1569c630e9cea6d95fc99bce37f54915daeadf7af764f0
+  "14":
+    - url: http://download.postgresql.org/pub/repos/yum/reporpms/F-39-x86_64/pgdg-fedora-repo-latest.noarch.rpm
+      dest: /var/cache/ansible/4d9df751e032bb897a1569c630e9cea6d95fc99bce37f54915daeadf7af764f0/pgdg-fedora-repo-latest.noarch.rpm
+      checksum: 4d9df751e032bb897a1569c630e9cea6d95fc99bce37f54915daeadf7af764f0
+
+_yum:
+  "16":
+    - { state: latest, name: nss_wrapper }
+    - { state: present, name: "postgresql16-server-{{ postgres_version }}*" }
+  "15":
+    - { state: latest, name: nss_wrapper }
+    - { state: present, name: "postgresql15-server-{{ postgres_version }}*" }
+  "14":
+    - { state: latest, name: nss_wrapper }
+    - { state: present, name: "postgresql14-server-{{ postgres_version }}*" }
