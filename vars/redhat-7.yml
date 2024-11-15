@@ -17,22 +17,20 @@
 _postgres_release: "15"
 
 _service:
+  "17": []
   "16": []
   "15": postgresql-15.service
-  "14": postgresql-14.service
 
 _rpm_key:
+  "17": []
   "16": []
   "15":
     - key: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL7
       fingerprint: F245F0BF96AC182744CAFF2E64FACE1173E3B907
       state: present
-  "14":
-    - key: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL7
-      fingerprint: F245F0BF96AC182744CAFF2E64FACE1173E3B907
-      state: present
 
 _yum_repository:
+  "17": []
   "16": []
   "15":
     - file: pgdg-redhat-all
@@ -45,23 +43,10 @@ _yum_repository:
       gpgcheck: true
       gpgkey: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL7
       state: present
-  "14":
-    - file: pgdg-redhat-all
-      name: pgdg14
-      description: PostgreSQL 14 for RHEL / Rocky / AlmaLinux 7 - $basearch
-      baseurl: http://download.postgresql.org/pub/repos/yum/14/redhat/rhel-7-$basearch
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL7
-      state: present
 
 _yum:
+  "17": []
   "16": []
   "15":
     - { state: latest, name: nss_wrapper }
     - { state: present, name: "postgresql15-server-{{ postgres_version }}*" }
-  "14":
-    - { state: latest, name: nss_wrapper }
-    - { state: present, name: "postgresql14-server-{{ postgres_version }}*" }

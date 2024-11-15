@@ -14,14 +14,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_postgres_release: "16"
+_postgres_release: "17"
 
 _service:
+  "17": postgresql-17.service
   "16": postgresql-16.service
   "15": postgresql-15.service
-  "14": postgresql-14.service
 
 _rpm_key:
+  "17":
+    - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+      fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
+      state: present
   "16":
     - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
@@ -30,12 +34,19 @@ _rpm_key:
     - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
       state: present
-  "14":
-    - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
-      fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
-      state: present
 
 _yum_repository:
+  "17":
+    - file: pgdg-redhat-all
+      name: pgdg17
+      description: PostgreSQL 17 for Fedora 39 - $basearch
+      baseurl: http://download.postgresql.org/pub/repos/yum/17/fedora/fedora-39-$basearch
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+      state: present
   "16":
     - file: pgdg-redhat-all
       name: pgdg16
@@ -58,25 +69,14 @@ _yum_repository:
       gpgcheck: true
       gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       state: present
-  "14":
-    - file: pgdg-redhat-all
-      name: pgdg14
-      description: PostgreSQL 14 for Fedora 39 - $basearch
-      baseurl: http://download.postgresql.org/pub/repos/yum/14/fedora/fedora-39-$basearch
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
-      state: present
 
 _yum:
+  "17":
+    - { state: latest, name: nss_wrapper }
+    - { state: present, name: "postgresql17-server-{{ postgres_version }}*" }
   "16":
     - { state: latest, name: nss_wrapper }
     - { state: present, name: "postgresql16-server-{{ postgres_version }}*" }
   "15":
     - { state: latest, name: nss_wrapper }
     - { state: present, name: "postgresql15-server-{{ postgres_version }}*" }
-  "14":
-    - { state: latest, name: nss_wrapper }
-    - { state: present, name: "postgresql14-server-{{ postgres_version }}*" }
