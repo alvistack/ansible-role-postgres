@@ -35,7 +35,7 @@ _yum_repository:
   "15":
     - file: pgdg-redhat-all
       name: pgdg15
-      description: PostgreSQL 15 for RHEL / Rocky / AlmaLinux 7 - $basearch
+      description: PostgreSQL 15 for RHEL / Rocky / CentOS 7 - $basearch
       baseurl: http://download.postgresql.org/pub/repos/yum/15/redhat/rhel-7-$basearch
       enabled: true
       priority: "2"
