@@ -39,7 +39,7 @@ _yum_repository:
   "17":
     - file: pgdg-redhat-all
       name: pgdg17
-      description: PostgreSQL 17 for RHEL / Rocky / AlmaLinux 8 - $basearch
+      description: PostgreSQL 17 for RHEL / Rocky / CentOS 8 Stream - $basearch
       baseurl: http://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-$basearch
       enabled: true
       priority: "2"
@@ -50,7 +50,7 @@ _yum_repository:
   "16":
     - file: pgdg-redhat-all
       name: pgdg16
-      description: PostgreSQL 16 for RHEL / Rocky / AlmaLinux 8 - $basearch
+      description: PostgreSQL 16 for RHEL / Rocky / CentOS 8 Stream - $basearch
       baseurl: http://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-$basearch
       enabled: true
       priority: "2"
@@ -61,7 +61,7 @@ _yum_repository:
   "15":
     - file: pgdg-redhat-all
       name: pgdg15
-      description: PostgreSQL 15 for RHEL / Rocky / AlmaLinux 8 - $basearch
+      description: PostgreSQL 15 for RHEL / Rocky / CentOS 8 Stream - $basearch
       baseurl: http://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-$basearch
       enabled: true
       priority: "2"
