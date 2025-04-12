@@ -1,0 +1,76 @@
+---
+
+# Copyright 2025 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_postgres_release: "16"
+
+_service:
+  "17": postgresql.service
+  "16": postgresql.service
+  "15": postgresql.service
+
+_apt_key:
+  "17":
+    - url: http://www.postgresql.org/media/keys/ACCC4CF8.asc
+      dest: /etc/apt/keyrings/postgresql.asc
+      checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
+  "16":
+    - url: http://www.postgresql.org/media/keys/ACCC4CF8.asc
+      dest: /etc/apt/keyrings/postgresql.asc
+      checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
+  "15":
+    - url: http://www.postgresql.org/media/keys/ACCC4CF8.asc
+      dest: /etc/apt/keyrings/postgresql.asc
+      checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
+
+_deb822_repository:
+  "17":
+    - name: postgresql
+      types: deb
+      uris: http://apt.postgresql.org/pub/repos/apt
+      suites: plucky-pgdg
+      components: main
+      signed_by: /etc/apt/keyrings/postgresql.asc
+      enabled: true
+      state: present
+  "16":
+    - name: postgresql
+      types: deb
+      uris: http://apt.postgresql.org/pub/repos/apt
+      suites: plucky-pgdg
+      components: main
+      signed_by: /etc/apt/keyrings/postgresql.asc
+      enabled: true
+      state: present
+  "15":
+    - name: postgresql
+      types: deb
+      uris: http://apt.postgresql.org/pub/repos/apt
+      suites: plucky-pgdg
+      components: main
+      signed_by: /etc/apt/keyrings/postgresql.asc
+      enabled: true
+      state: present
+
+_apt:
+  "17":
+    - { state: latest, name: libnss-wrapper }
+    - { state: present, name: "postgresql-17={{ postgres_version }}*" }
+  "16":
+    - { state: latest, name: libnss-wrapper }
+    - { state: present, name: "postgresql-16={{ postgres_version }}*" }
+  "15":
+    - { state: latest, name: libnss-wrapper }
+    - { state: present, name: "postgresql-15={{ postgres_version }}*" }
