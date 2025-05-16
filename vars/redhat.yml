@@ -23,15 +23,15 @@ _service:
 
 _rpm_key:
   "17":
-    - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+    - key: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
       state: present
   "16":
-    - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+    - key: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
       state: present
   "15":
-    - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+    - key: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
       state: present
 
@@ -39,35 +39,35 @@ _yum_repository:
   "17":
     - file: pgdg-redhat-all
       name: pgdg17
-      description: PostgreSQL 17 for Fedora 41 - $basearch
-      baseurl: http://download.postgresql.org/pub/repos/yum/17/fedora/fedora-41-$basearch
+      description: PostgreSQL 17 for Fedora 42 - $basearch
+      baseurl: https://download.postgresql.org/pub/repos/yum/17/fedora/fedora-42-$basearch
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+      gpgkey: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       state: present
   "16":
     - file: pgdg-redhat-all
       name: pgdg16
-      description: PostgreSQL 16 for Fedora 41 - $basearch
-      baseurl: http://download.postgresql.org/pub/repos/yum/16/fedora/fedora-41-$basearch
+      description: PostgreSQL 16 for Fedora 42 - $basearch
+      baseurl: https://download.postgresql.org/pub/repos/yum/16/fedora/fedora-42-$basearch
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+      gpgkey: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       state: present
   "15":
     - file: pgdg-redhat-all
       name: pgdg15
-      description: PostgreSQL 15 for Fedora 41 - $basearch
-      baseurl: http://download.postgresql.org/pub/repos/yum/15/fedora/fedora-41-$basearch
+      description: PostgreSQL 15 for Fedora 42 - $basearch
+      baseurl: https://download.postgresql.org/pub/repos/yum/15/fedora/fedora-42-$basearch
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
+      gpgkey: https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       state: present
 
 _yum:
