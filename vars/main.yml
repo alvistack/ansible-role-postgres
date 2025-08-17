@@ -15,6 +15,6 @@
 # limitations under the License.
 
 _postgres_version:
-  "17": "17.5"
-  "16": "16.9"
-  "15": "15.13"
+  "17": "17.6"
+  "16": "16.10"
+  "15": "15.14"
