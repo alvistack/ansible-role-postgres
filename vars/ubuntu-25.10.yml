@@ -40,7 +40,7 @@ _deb822_repository:
     - name: postgresql
       types: deb
       uris: http://apt.postgresql.org/pub/repos/apt
-      suites: oracular-pgdg
+      suites: questing-pgdg
       components: main
       signed_by: /etc/apt/keyrings/postgresql.asc
       enabled: true
@@ -49,7 +49,7 @@ _deb822_repository:
     - name: postgresql
       types: deb
       uris: http://apt.postgresql.org/pub/repos/apt
-      suites: oracular-pgdg
+      suites: questing-pgdg
       components: main
       signed_by: /etc/apt/keyrings/postgresql.asc
       enabled: true
@@ -58,7 +58,7 @@ _deb822_repository:
     - name: postgresql
       types: deb
       uris: http://apt.postgresql.org/pub/repos/apt
-      suites: oracular-pgdg
+      suites: questing-pgdg
       components: main
       signed_by: /etc/apt/keyrings/postgresql.asc
       enabled: true
