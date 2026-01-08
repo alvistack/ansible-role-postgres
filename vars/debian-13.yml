@@ -1,6 +1,6 @@
 ---
 
-# Copyright 2025 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+# Copyright 2026 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,28 +14,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_postgres_release: "16"
+_postgres_release: "18"
 
 _service:
+  "18": postgresql.service
   "17": postgresql.service
   "16": postgresql.service
-  "15": postgresql.service
 
 _apt_key:
+  "18":
+    - url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+      dest: /etc/apt/keyrings/postgresql.asc
+      checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
   "17":
     - url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
       dest: /etc/apt/keyrings/postgresql.asc
       checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
   "16":
-    - url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
-      dest: /etc/apt/keyrings/postgresql.asc
-      checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
-  "15":
     - url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
       dest: /etc/apt/keyrings/postgresql.asc
       checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
 
 _deb822_repository:
+  "18":
+    - name: postgresql
+      types: deb
+      uris: https://apt.postgresql.org/pub/repos/apt
+      suites: sid-pgdg
+      components: main
+      signed_by: /etc/apt/keyrings/postgresql.asc
+      enabled: true
+      state: present
   "17":
     - name: postgresql
       types: deb
@@ -46,15 +55,6 @@ _deb822_repository:
       enabled: true
       state: present
   "16":
-    - name: postgresql
-      types: deb
-      uris: https://apt.postgresql.org/pub/repos/apt
-      suites: sid-pgdg
-      components: main
-      signed_by: /etc/apt/keyrings/postgresql.asc
-      enabled: true
-      state: present
-  "15":
     - name: postgresql
       types: deb
       uris: https://apt.postgresql.org/pub/repos/apt
@@ -65,12 +65,12 @@ _deb822_repository:
       state: present
 
 _apt:
+  "18":
+    - { state: latest, name: libnss-wrapper }
+    - { state: present, name: "postgresql-18={{ postgres_version }}*" }
   "17":
     - { state: latest, name: libnss-wrapper }
     - { state: present, name: "postgresql-17={{ postgres_version }}*" }
   "16":
     - { state: latest, name: libnss-wrapper }
     - { state: present, name: "postgresql-16={{ postgres_version }}*" }
-  "15":
-    - { state: latest, name: libnss-wrapper }
-    - { state: present, name: "postgresql-15={{ postgres_version }}*" }

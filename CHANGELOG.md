@@ -2,6 +2,12 @@
 
 ## 13.0.0 - TBC
 
+## 12.3.0 - 2026-01-08
+
+- Support Ansible community package 12.3.0
+- Support PostgreSQL 18
+- Remove PostgreSQL 15 support
+
 ## 12.2.0 - 2025-11-20
 
 - Support Ansible community package 12.2.0

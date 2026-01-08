@@ -1,6 +1,6 @@
 ---
 
-# Copyright 2025 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+# Copyright 2026 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,6 +15,6 @@
 # limitations under the License.
 
 _postgres_version:
-  "17": "17.6"
-  "16": "16.10"
-  "15": "15.14"
+  "18": "18.1"
+  "17": "17.7"
+  "16": "16.11"
