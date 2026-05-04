@@ -70,7 +70,7 @@ _yum_repository:
       gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL
       state: present
 
-_yum:
+_dnf:
   "18":
     - { state: latest, name: nss_wrapper }
     - { state: present, name: "postgresql18-server-{{ postgres_version }}*" }
