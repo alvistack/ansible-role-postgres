@@ -16,12 +16,14 @@
 
 _postgres_release: "18"
 
-_service:
+_service: "{{ __service[postgres_release] }}"
+__service:
   "18": postgresql-18.service
   "17": postgresql-17.service
   "16": postgresql-16.service
 
-_rpm_key:
+_rpm_key: "{{ __rpm_key[postgres_release] }}"
+__rpm_key:
   "18":
     - key: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
@@ -35,7 +37,8 @@ _rpm_key:
       fingerprint: D4BF08AE67A0B4C7A1DBCCD240BCA2B408B40D20
       state: present
 
-_yum_repository:
+_yum_repository: "{{ __yum_repository[postgres_release] }}"
+__yum_repository:
   "18":
     - file: pgdg-redhat-all
       name: pgdg18
@@ -70,7 +73,8 @@ _yum_repository:
       gpgkey: http://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
       state: present
 
-_dnf:
+_dnf: "{{ __dnf[postgres_release] }}"
+__dnf:
   "18":
     - { state: latest, name: nss_wrapper }
     - { state: present, name: "postgresql18-server-{{ postgres_version }}*" }

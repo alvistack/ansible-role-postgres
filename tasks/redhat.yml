@@ -18,9 +18,11 @@
     key: "{{ item.key }}"
     fingerprint: "{{ item.fingerprint }}"
     state: "{{ item.state }}"
-  loop: "{{ _rpm_key[postgres_release] }}"
+  loop: "{{ _rpm_key }}"
   register: result
   until: result is succeeded
+  tags:
+    - _rpm_key
 
 - name: yum-config-manager --add-repo
   ansible.builtin.yum_repository:
@@ -34,7 +36,9 @@
     gpgcheck: "{{ item.gpgcheck }}"
     gpgkey: "{{ item.gpgkey }}"
     state: "{{ item.state }}"
-  loop: "{{ _yum_repository[postgres_release] }}"
+  loop: "{{ _yum_repository }}"
+  tags:
+    - _yum_repository
 
 - name: dnf versionlock delete
   ansible.builtin.shell:
@@ -43,21 +47,25 @@
       dnf --cacheonly versionlock delete {{ item.name | regex_replace('^(.*)-[0-9]*:*[0-9]+\\..*$', '\\1-*') }}
   args:
     executable: /bin/bash
-  loop: "{{ _dnf[postgres_release] }}"
+  loop: "{{ _dnf }}"
   when: item.state == "present"
   changed_when: false
   failed_when: false
+  tags:
+    - _dnf
 
 - name: dnf install
   ansible.builtin.dnf:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     disablerepo: "{{ item.disablerepo | default(None) or omit }}"
-  loop: "{{ _dnf[postgres_release] }}"
+  loop: "{{ _dnf }}"
   register: result
   until: result is succeeded
   notify:
     - postgres | systemctl restart postgresql.service
+  tags:
+    - _dnf
 
 - name: dnf versionlock add
   ansible.builtin.shell:
@@ -66,10 +74,12 @@
       dnf --cacheonly versionlock add {{ item.name | regex_replace('^(.*)-[0-9]*:*[0-9]+\\..*$', '\\1-*') }}
   args:
     executable: /bin/bash
-  loop: "{{ _dnf[postgres_release] }}"
+  loop: "{{ _dnf }}"
   when: item.state == "present"
   changed_when: false
   failed_when: false
+  tags:
+    - _dnf
 
 - name: initdb
   ansible.builtin.shell:

@@ -16,12 +16,14 @@
 
 _postgres_release: "18"
 
-_service:
+_service: "{{ __service[postgres_release] }}"
+__service:
   "18": postgresql.service
   "17": postgresql.service
   "16": postgresql.service
 
-_rpm_key:
+_rpm_key: "{{ __rpm_key[postgres_release] }}"
+__rpm_key:
   "18":
     - key: http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/15.6/repodata/repomd.xml.key
       fingerprint: 116EB86331583E47E63CDF4D562111AC05905EA8
@@ -35,7 +37,8 @@ _rpm_key:
       fingerprint: 116EB86331583E47E63CDF4D562111AC05905EA8
       state: present
 
-_yum_repository:
+_yum_repository: "{{ __yum_repository[postgres_release] }}"
+__yum_repository:
   "18":
     - file: server_database_postgresql
       name: server_database_postgresql
@@ -70,7 +73,8 @@ _yum_repository:
       gpgkey: http://downloadcontent.opensuse.org/repositories/server:/database:/postgresql/15.6/repodata/repomd.xml.key
       state: present
 
-_zypper:
+_zypper: "{{ __zypper[postgres_release] }}"
+__zypper:
   "18":
     - { state: latest, name: nss_wrapper }
     - { state: present, name: "postgresql18-server-{{ postgres_version }}" }

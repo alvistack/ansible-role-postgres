@@ -18,4 +18,4 @@
 postgres_release: "{{ _postgres_release }}"
 
 # PostgreSQL version.
-postgres_version: "{{ _postgres_version[postgres_release] }}"
+postgres_version: "{{ _postgres_version }}"
