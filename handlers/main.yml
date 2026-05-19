@@ -15,7 +15,7 @@
 
 - name: postgres | systemctl restart postgresql.service
   ansible.builtin.service:
-    name: "{{ _service[postgres_release] }}"
+    name: "{{ _service }}"
     state: restarted
     enabled: true
   loop: "{{ ansible_play_hosts }}"

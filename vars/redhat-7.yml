@@ -16,22 +16,26 @@
 
 _postgres_release: "15"
 
-_service:
+_service: "{{ __service[postgres_release] }}"
+__service:
   "18": ~
   "17": ~
   "16": ~
 
-_rpm_key:
+_rpm_key: "{{ __rpm_key[postgres_release] }}"
+__rpm_key:
   "18": []
   "17": []
   "16": []
 
-_yum_repository:
+_yum_repository: "{{ __yum_repository[postgres_release] }}"
+__yum_repository:
   "18": []
   "17": []
   "16": []
 
-_yum:
+_yum: "{{ __yum[postgres_release] }}"
+__yum:
   "18": []
   "17": []
   "16": []

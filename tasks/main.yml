@@ -57,7 +57,7 @@
 
 - name: systemctl start postgresql.service
   ansible.builtin.service:
-    name: "{{ _service[postgres_release] }}"
+    name: "{{ _service }}"
     state: started
     enabled: true
   changed_when: false

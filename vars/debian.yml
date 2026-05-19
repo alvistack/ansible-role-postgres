@@ -16,12 +16,14 @@
 
 _postgres_release: "18"
 
-_service:
+_service: "{{ __service[postgres_release] }}"
+__service:
   "18": postgresql.service
   "17": postgresql.service
   "16": postgresql.service
 
-_apt_key:
+_apt_key: "{{ __apt_key[postgres_release] }}"
+__apt_key:
   "18":
     - url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
       dest: /etc/apt/keyrings/postgresql.asc
@@ -35,7 +37,8 @@ _apt_key:
       dest: /etc/apt/keyrings/postgresql.asc
       checksum: "sha256:0144068502a1eddd2a0280ede10ef607d1ec592ce819940991203941564e8e76"
 
-_deb822_repository:
+_deb822_repository: "{{ __deb822_repository[postgres_release] }}"
+__deb822_repository:
   "18":
     - name: postgresql
       types: deb
@@ -64,7 +67,8 @@ _deb822_repository:
       enabled: true
       state: present
 
-_apt:
+_apt: "{{ __apt[postgres_release] }}"
+__apt:
   "18":
     - { state: latest, name: libnss-wrapper }
     - { state: present, name: "postgresql-18={{ postgres_version }}*" }
