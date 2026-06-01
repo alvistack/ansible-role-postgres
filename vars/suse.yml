@@ -77,10 +77,13 @@ _zypper: "{{ __zypper[postgres_release] }}"
 __zypper:
   "18":
     - { state: latest, name: nss_wrapper }
+    - { state: latest, name: pgloader }
     - { state: present, name: "postgresql18-server-{{ postgres_version }}" }
   "17":
     - { state: latest, name: nss_wrapper }
+    - { state: latest, name: pgloader }
     - { state: present, name: "postgresql17-server-{{ postgres_version }}" }
   "16":
     - { state: latest, name: nss_wrapper }
+    - { state: latest, name: pgloader }
     - { state: present, name: "postgresql16-server-{{ postgres_version }}" }
