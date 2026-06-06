@@ -71,10 +71,13 @@ _apt: "{{ __apt[postgres_release] }}"
 __apt:
   "18":
     - { state: latest, name: libnss-wrapper }
+    - { state: latest, name: pgloader }
     - { state: present, name: "postgresql-18={{ postgres_version }}*" }
   "17":
     - { state: latest, name: libnss-wrapper }
+    - { state: latest, name: pgloader }
     - { state: present, name: "postgresql-17={{ postgres_version }}*" }
   "16":
     - { state: latest, name: libnss-wrapper }
+    - { state: latest, name: pgloader }
     - { state: present, name: "postgresql-16={{ postgres_version }}*" }
