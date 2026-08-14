@@ -16,6 +16,6 @@
 
 _postgres_version: "{{ __postgres_version[postgres_release] }}"
 __postgres_version:
-  "18": "18.4"
-  "17": "17.10"
-  "16": "16.14"
+  "18": "18.6"
+  "17": "17.11"
+  "16": "16.15"
